@@ -42,7 +42,7 @@ $ git checkout -b feature/<branch_name> develop
 
 
 
-## Push the commit
+## Track and push to the remote branch
 
 After saving changes to local repository, we can push the commit(s) to remote by,
 
@@ -55,3 +55,11 @@ Or
 ```s
 $ git push --set-upstream origin feature/<branch_name>
 ```
+
+
+
+---
+## References
+
+- [git-flow cheetsheet](https://danielkummer.github.io/git-flow-cheatsheet/)
+
