@@ -28,7 +28,10 @@ $ git remote add origin git@github.com:<id>/<repository>
 
 
 ---
-## Create a feature Branch from develop branch
+## Feature Branch
+
+
+### Create a feature Branch based on develop branch
 
 ```s
 $ git flow feature start <branch_name>
@@ -42,7 +45,7 @@ $ git checkout -b feature/<branch_name> develop
 
 
 
-## Track and push to the remote branch
+### Track and push to the remote branch
 
 After saving changes to local repository, we can push the commit(s) to remote by,
 
@@ -56,6 +59,43 @@ Or
 $ git push --set-upstream origin feature/<branch_name>
 ```
 
+After that we can push commit(s) with `git push`.
+
+
+### Checkout an exist branch and pull
+
+```s
+$ git flow feature pull origin <branch_name>
+```
+
+Or
+
+```s
+$ git checkout feature/<branch_name>
+$ git pull --rebase
+```
+
+
+### Merge to develop branch
+
+```s
+$ git checkout develop
+$ git pull --rebase
+$ git flow feature finish <branch_name>
+$ git push
+```
+
+Or
+
+```s
+$ git checkout develop
+$ git pull --rebase
+
+# Merge feature branch to develop branch without fast-forward
+$ git merge --no-ff feature/<branch_name>
+$ git push
+$ git branch -d feature/<branch>
+```
 
 
 ---
