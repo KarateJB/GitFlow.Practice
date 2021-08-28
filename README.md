@@ -43,3 +43,15 @@ $ git checkout -b feature/<branch_name> develop
 
 
 ## Push the commit
+
+After saving changes to local repository, we can push the commit(s) to remote by,
+
+```s
+$ git flow feature publish <branch_name>
+```
+
+Or
+
+```s
+$ git push --set-upstream origin feature/<branch_name>
+```
