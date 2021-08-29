@@ -111,7 +111,7 @@ After merging the feature branch to develop branch, the git history is like:
 ### Create a release branch based on develop branch
 
 ```s
-$ git flow release start <my_branch> [base]
+$ git flow release start <name_or_version> [base]
 ```
 
 The optional argument, `[base]`, must be the commit hash code on the `develop` branch.
@@ -217,6 +217,52 @@ $ git push
 $ git checkout master
 $ git push --follow-tags
 ```
+
+The result:
+
+![](assets/bugfix-release-finished.jpg)
+
+
+
+***
+## Hotfix
+
+### Create a Hotfix branch
+
+```s
+$ git flow hotfix start <name_or_version> [base]
+```
+
+For example,
+
+```s
+$ git flow hotfix start 0.1.2
+```
+
+
+### Track and push to remote
+
+```s
+$ git flow hotfix publish 0.1.2
+```
+
+Or checkout and pull the exist hotfix branch from remote:
+
+```s
+git flow hotfix pull origin 0.1.2
+```
+
+
+### Finish the Hotfix
+
+The behavior of `git flow hotfix finish` is similar with `git flow release finish`.
+
+
+```s
+$ git flow hotfix finish 0.1.2
+```
+
+
 
 
 ***
