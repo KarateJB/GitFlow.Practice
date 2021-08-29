@@ -1,6 +1,6 @@
 # GitFlow.Practice
 
----
+***
 ## Init
 
 ```s
@@ -27,7 +27,7 @@ $ git remote add origin git@github.com:<id>/<repository>
 ```
 
 
----
+***
 ## Feature development
 
 
@@ -261,6 +261,21 @@ The behavior of `git flow hotfix finish` is similar with `git flow release finis
 ```s
 $ git flow hotfix finish 0.1.2
 ```
+
+Summary of actions:
+- Hotfix branch 'hotfix/0.1.2' has been merged into 'master'
+- The hotfix was tagged '0.1.2'
+- Hotfix tag '0.1.2' has been back-merged into 'develop'
+- Hotfix branch 'hotfix/0.1.2' has been locally deleted; it has been remotely deleted from 'origin'
+- You are now on branch 'develop'
+
+
+
+![](assets/hotfix-finished.jpg)
+
+
+
+
 
 
 
