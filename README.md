@@ -188,8 +188,38 @@ Now the git history is as follwoing.
 
 
 
+***
+## Bug Fixing
 
----
+The flow of `bugfix` is similar with `feature`. Let's go through the flow quickly.
+
+
+```s
+# Create bugfix branch
+$ git flow bugfix start <my_branch>
+
+# Track and push
+$ git flow bugfix publish <my_branch>
+
+# Merge to develop branch
+$ git flow bugfix finish <my_branch>
+
+# Push develop branch
+$ git push
+
+# Create release branch, track and push to remote
+$ git flow release start 0.1.1
+$ git flow release publish 0.1.1
+
+$ Finish release
+$ git flow release finish 0.1.1
+$ git push
+$ git checkout master
+$ git push --follow-tags
+```
+
+
+***
 ## References
 
 - [git-flow cheetsheet](https://danielkummer.github.io/git-flow-cheatsheet/)
